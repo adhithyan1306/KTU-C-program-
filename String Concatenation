@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main() {
+    char a[100], b[100];
+    int i, j, n;
+
+    printf("Enter the first String:\n");
+    fgets(a, sizeof(a), stdin);
+    printf("Enter the second String:\n");
+    fgets(b, sizeof(b), stdin);
+
+    for (n = 0; a[n] != '\0'; n++);
+    
+    i = 0;
+    j = n - 1;
+
+    while (b[i] != '\0') {
+        a[j] = b[i];
+        i++;
+        j++;
+    }
+
+    a[j] = '\0';
+
+    printf("Concatenated String: %s\n", a);
+
+    return 0;
+}
+#include <stdio.h>
+
+int main() {
+    char a[100], b[100];
+    int i, j, n;
+
+    printf("Enter the first String:\n");
+    fgets(a, sizeof(a), stdin);
+    printf("Enter the second String:\n");
+    fgets(b, sizeof(b), stdin);
+
+    for (n = 0; a[n] != '\0'; n++);
+    
+    i = 0;
+    j = n - 1;
+
+    while (b[i] != '\0') {
+        a[j] = b[i];
+        i++;
+        j++;
+    }
+
+    a[j] = '\0';
+
+    printf("Concatenated String: %s\n", a);
+
+    return 0;
+}
