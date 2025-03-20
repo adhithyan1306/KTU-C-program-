@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    int a[25], n;
+    int i, j, t;
+
+    printf("Enter the size of the array (max 25): ");
+    scanf("%d", &n);
+
+    if (n > 25 || n <= 0) {
+        printf("Invalid array size. Please enter a number between 1 and 25.\n");
+        return 1;
+    }
+
+    printf("Enter the elements:\n");
+    for (i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (i = 0; i < n - 1; i++) {
+        for (j = 0; j < n - i - 1; j++) {
+            if (a[j] > a[j + 1]) {
+                t = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = t;
+            }
+        }
+    }
+
+    printf("Sorted array: ");
+    for (i = 0; i < n; i++) {
+        printf("%d ", a[i]);
+    }
+    
+    printf("\n");
+    return 0;
+}
